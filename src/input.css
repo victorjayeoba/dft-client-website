@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  html {
+    font-family: "Recursive", sans-serif;
+   /*  font-family: "Lato", sans-serif; */
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+/* font-family: 'Red Hat Mono', monospace; */
+  }
+/*  
+font-family: 'Recursive', sans-serif;
+font-family: 'Red Hat Mono', monospace;
+font-family: 'REM', sans-serif;
+
+:root {
+    --background: #005;
+    --primary: #88d5bf;
+    --secondary: #5d6bf8;
+    --third: #e27fcb;
+  } */
+:root{
+  --background: white;
+  --primary: rgba(255, 255, 255, 0.849);
+  --secondary: white;
+  --third: white;
+  font-size:18px;
+}
+
+  * {
+    box-sizing: border-box;
+  }
+  body{
+    padding: 0;
+  }
+
+  .monospace_font{
+    font-family: 'Red Hat Mono', monospace;
+  }
+  #menu_list {
+    transition: 0.5s ease;
+  }
+
+  .radial_gradient_2{
+    background-image: radial-gradient(rgb(0, 0, 0) ,rgb(0, 0, 0));
+  }
+  ::selection, mark{
+    @apply bg-purple-300
+  }
+ label{
+  cursor: pointer;
+ }
+textarea{
+  resize: none;
+}
+  @media (width < 768px){
+    .active {
+        transform: translateX(100%);
+        transition: 0.5s ease;
+      }
+      
+  }
+
+nav.activeNav{
+@apply fixed top-0 left-0 z-50
+}
+
+
+
+header> section{
+  @apply bg-transparent
+}
+
+.slick-track,.slick-slide{
+  display: flex!important;
+  gap: 1rem!important;
+}
+div.q_a >div{
+  @apply shadow-inner my-5 px-5 rounded-sm cursor-pointer border-s-4  border-slate-200 ;
+  display: grid;
+/*   grid-template-rows: auto 0; */
+
+}
+
+div.q_a >div  .answer{
+ height: 0;
+ overflow: hidden;
+ transition: .2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+div.q_a >div.activeFaq .answer{
+  @apply font-thin;
+  height:100%;
+  transition:.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+}
+div.q_a >div.activeFaq i{
+  transform: rotate(180deg);
+
+  transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+ /*  .shape {
+    background: linear-gradient(
+      45deg,
+      var(--primary) 0%,
+      var(--secondary) 100%
+    );
+
+ 
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transition: all 1s ease-in-out;
+  }
+
+  @keyframes morph {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      background: linear-gradient(
+        45deg,
+        var(--primary) 0%,
+        var(--secondary) 100%
+      );
+    }
+
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      background: linear-gradient(
+        45deg,
+        var(--third) 0%,
+        var(--secondary) 100%
+      );
+    }
+
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      background: linear-gradient(
+        45deg,
+        var(--primary) 0%,
+        var(--secondary) 100%
+      );
+    }
+  } */
+
+  .custom_bg {
+    background-image: linear-gradient(
+      rgb(0, 68, 255),
+      rgb(0, 68, 255),
+      #0044ffd8
+    );
+    border-radius: 50%;
+    animation: semi 4s 1;
+
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+  }
+  .fa-bars,
+  header {
+    z-index: 15 !important;
+  }
+  /*  @keyframe semi{
+        50%{
+            border-radius: 0;
+        }
+    }
+ */
+
+
+.linear_gradient{
+    background-image: radial-gradient(rgb(0, 0, 0) 60%,rgba(0, 0, 0, 0.616));
+}
+@media (width >= 768px){
+    #menuBar{
+        display: none;
+    }
+}
+header{
+  z-index: -100;
+}
+
+}
