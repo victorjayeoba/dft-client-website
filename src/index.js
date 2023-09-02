@@ -12,6 +12,13 @@ function toggleClass(e) {
 
 }
 
+const yearController = () => {
+    let year = new Date().getFullYear()
+    console.log(year)
+    copyright.textContent += year
+}
+yearController()
+
 Array.from(divFaq).map((e, id) => {
     e.addEventListener('click', (ev) => {
         Array.from(divFaq).map((elem, id) => {
@@ -60,7 +67,6 @@ ScrollTrigger.create({
     pinSpacing: false,
     scrub: true,
     pin: true,
-
 })
 
 let tl = gsap.timeline()
@@ -141,12 +147,7 @@ $(".slider").slick({
 });
 //break
 
-const yearController = () => {
-    let year = new Date().getFullYear()
-    console.log(year)
-    copyright.textContent += year
-}
-yearController()
+
 
 let text = new SplitType('.motion')
 let character = document.querySelectorAll('.char')
