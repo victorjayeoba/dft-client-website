@@ -3,8 +3,28 @@ const header = document.getElementById('header')
 const nav = document.getElementById("nav")
 const divFaq = document.querySelectorAll(".q_a > div")
 const copyright = document.getElementById("copyright")
-console.log(divFaq)
 
+/* const email = document.getElementById("email").value
+const firstName = document.getElementById("firstName").value
+const LastName = document.getElementById("lastName").value
+const body = document.getElementById("body").value */
+//dftradingforex@gmail.com
+//21f6f930-c62f-4d39-a850-4d925b550cd7 
+
+/* 
+function sendEmail() {
+    Email.send({
+        SecureToken: "21f6f930-c62f-4d39-a850-4d925b550cd7",
+        To: "dftradingforex@gmail.com",
+        From: email,
+        Subject: "New Contact form enquiry",
+        Body: "Name: " + firstName + LastName
+            + "<br> Email: " + email
+            + "<br> Message: " + body
+    }).then(
+        message => alert("Message Sent Succesfully")
+    )
+} */
 
 function toggleClass(e) {
 
@@ -41,7 +61,7 @@ window.addEventListener("click", (e) => {
 
 })
 
-console.log(menu_list.classList)
+
 window.addEventListener("scroll", (e) => {
     /*     console.log(windowProgress) */
     if (windowProgress > e.currentTarget.scrollY && windowProgress > headerHeight - 50) {
@@ -97,7 +117,6 @@ gsap.to('.nav_logo', {
 
 }) */
 
-console.log(window.innerWidth)
 
 $(".slider").slick({
     dots: true,
